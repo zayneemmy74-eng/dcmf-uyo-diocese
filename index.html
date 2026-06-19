@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DCMF Registration Portal</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+background:#f5f7fa;
+color:#333;
+}
+
+header{
+background:linear-gradient(rgba(0,0,120,.8),rgba(180,0,0,.7));
+color:white;
+padding:80px 20px;
+text-align:center;
+}
+
+header h1{
+font-size:2.5rem;
+margin-bottom:10px;
+}
+
+header p{
+font-size:1.1rem;
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+background:white;
+color:#0033cc;
+padding:12px 25px;
+border-radius:5px;
+text-decoration:none;
+font-weight:bold;
+}
+
+section{
+padding:50px 8%;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 2px 10px rgba(0,0,0,.1);
+margin-bottom:25px;
+}
+
+h2{
+color:#0033cc;
+margin-bottom:15px;
+}
+
+.payment{
+background:#fff8e6;
+border-left:5px solid #ff9900;
+}
+
+form{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+input,select,textarea{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+button{
+width:100%;
+padding:14px;
+background:#0033cc;
+color:white;
+border:none;
+border-radius:5px;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#001f80;
+}
+
+footer{
+background:#002366;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+#countdown{
+font-size:24px;
+font-weight:bold;
+color:#cc0000;
+margin-top:10px;
+}
+
+.map iframe{
+width:100%;
+height:350px;
+border:0;
+border-radius:10px;
+}
+
+.success{
+display:none;
+background:#d4edda;
+padding:15px;
+border-radius:5px;
+color:#155724;
+margin-bottom:15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Diocesan Christian Men Fellowship (DCMF)</h1>
+
+<p><strong>Theme:</strong> Positioned for Divine Assignment</p>
+
+<p><strong>Text:</strong> Genesis 45:5-7</p>
+
+<a href="#register" class="btn">Register Now</a>
+
+<div id="countdown"></div>
+
+</header>
+
+<section>
+
+<div class="card">
+<h2>Conference Information</h2>
+
+<p><strong>Venue:</strong>
+St Michael's and All Angels Anglican Church,
+Ekong Uko, Eket</p>
+
+<p><strong>Address:</strong>
+6 Ekong Uko Street, Eket 524101,
+Akwa Ibom State</p>
+
+<p><strong>Host:</strong>
+St Michael's and All Angels Anglican Church</p>
+
+<p><strong>Contact:</strong>
+08062063960</p>
+
+<p><strong>Email:</strong>
+oriakugift746@gmail.com</p>
+
+</div>
+
+<div class="card payment">
+
+<h2>Payment Details</h2>
+
+<p><strong>Registration Fee:</strong> ₦5,000</p>
+
+<p><strong>Bank:</strong> Zenith Bank</p>
+
+<p><strong>Account Name:</strong>
+Christian Men Fellowship</p>
+
+<p><strong>Account Number:</strong>
+1013181706</p>
+
+<p>Please make payment before filling the form.</p>
+
+</div>
+
+</section>
+
+<section id="register">
+
+<h2>Conference Registration</h2>
+
+<div class="success" id="successMsg">
+Registration Submitted Successfully!
+</div>
+
+<form id="registrationForm">
+
+<input type="text"
+placeholder="Full Name" required>
+
+<input type="tel"
+placeholder="Phone Number" required>
+
+<input type="tel"
+placeholder="WhatsApp Number" required>
+
+<input type="email"
+placeholder="Email Address">
+
+<input type="number"
+placeholder="Age" required>
+
+<input type="text"
+placeholder="Parish" required>
+
+<select required>
+<option value="">Select Archdeaconry</option>
+<option>Cathedral</option>
+<option>Uyo</option>
+<option>Eket</option>
+<option>Eastern Obolo</option>
+<option>Ikot Abasi</option>
+<option>Ikot Ekpene</option>
+<option>Oron</option>
+<option>Anam</option>
+<option>Ibeno</option>
+<option>Uyo Satellite</option>
+<option>West Itam Deanery</option>
+</select>
+
+<select required>
+<option value="">Position in Church</option>
+<option>Member</option>
+<option>Clergy</option>
+<option>Knight</option>
+<option>Executive</option>
+</select>
+
+<input type="text"
+placeholder="Occupation">
+
+<input type="tel"
+placeholder="Emergency Contact">
+
+<input type="text"
+placeholder="Transaction Reference Number"
+required>
+
+<label>
+Upload Payment Receipt
+</label>
+
+<input type="file"
+required>
+
+<button type="submit">
+Submit Registration
+</button>
+
+</form>
+
+</section>
+
+<section>
+
+<div class="card">
+
+<h2>Your Registration ID</h2>
+
+<p id="regid">
+DCMF-2026-0001
+</p>
+
+</div>
+
+</section>
+
+<section class="map">
+
+<h2>Venue Location</h2>
+
+<iframe
+src="https://maps.google.com/maps?q=6%20Ekong%20Uko%20Street%20Eket&t=&z=15&ie=UTF8&iwloc=&output=embed">
+</iframe>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 Diocesan Christian Men Fellowship
+</p>
+
+</footer>
+
+<script>
+
+const targetDate =
+new Date("August 20, 2026 09:00:00");
+
+const countdown =
+document.getElementById("countdown");
+
+setInterval(() => {
+
+const now = new Date().getTime();
+
+const distance =
+targetDate - now;
+
+const days =
+Math.floor(distance /
+(1000*60*60*24));
+
+countdown.innerHTML =
+days + " Days To Conference";
+
+},1000);
+
+document
+.getElementById("registrationForm")
+.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+let random =
+Math.floor(Math.random()*9999);
+
+document
+.getElementById("regid")
+.innerHTML =
+"DCMF-2026-" +
+String(random)
+.padStart(4,"0");
+
+document
+.getElementById("successMsg")
+.style.display="block";
+
+this.reset();
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+});
+
+</script>
+
+</body>
+</html>
